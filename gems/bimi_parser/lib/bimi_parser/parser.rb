@@ -3,9 +3,11 @@ module BimiParser
     root :record
 
     rule :record do
-      bimi_version.as(:version) >>
-      bimi_locations.as(:locations) >>
-      bimi_authorities.maybe.as(:authorities)
+      (
+        bimi_version.as(:version) >>
+        bimi_locations.as(:locations) >>
+        bimi_authorities.maybe.as(:authorities)
+      ).as(:record)
     end
 
     rule :bimi_version do

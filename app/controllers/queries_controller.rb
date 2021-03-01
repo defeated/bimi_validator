@@ -19,6 +19,6 @@ class QueriesController < ApplicationController
     # ... or get fancy and build a grammar :)
     tree = BimiParser::Parser.new.parse txt
     transform = BimiParser::Transformer.new.apply(tree)
-    render json: transform
+    render json: transform.inspect
   end
 end
