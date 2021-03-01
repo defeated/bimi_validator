@@ -1,3 +1,9 @@
+PATH
+  remote: gems/bimi_parser
+  specs:
+    bimi_parser (0.1.0)
+      parslet (~> 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -92,6 +98,7 @@ GEM
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    parslet (2.0.0)
     puma (5.2.1)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -149,6 +156,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bimi_parser!
   bootsnap (>= 1.4.4)
   byebug
   listen (~> 3.3)
