@@ -1,24 +1,17 @@
-# README
+# BIMI Validator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Build
 
-Things you may want to cover:
+```
+docker build -t bimi-app:latest .
+```
 
-* Ruby version
+## Run
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker run \
+  --rm -it \
+  -v "$PWD:/app:delegated" \
+  -p "3000:3000" \
+  bimi-app:latest
+```
